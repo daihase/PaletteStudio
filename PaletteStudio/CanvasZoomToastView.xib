@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="CanvasZoomToastView" customClass="CanvasZoomToastView" customModule="PaletteStudio" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h96-dz-UxF">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="P7u-lj-XdD"/>
+                        <constraint firstAttribute="width" constant="130" id="WgR-bV-54a"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGr-zL-EIG" userLabel="Scale Param" customClass="AttributeLabel" customModule="PaletteStudio" customModuleProvider="target">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="h96-dz-UxF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Dwv-E3-gsS"/>
+                <constraint firstItem="FGr-zL-EIG" firstAttribute="centerX" secondItem="h96-dz-UxF" secondAttribute="centerX" id="Ja4-4E-ae6"/>
+                <constraint firstItem="h96-dz-UxF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Vb4-N7-kf1"/>
+                <constraint firstItem="FGr-zL-EIG" firstAttribute="centerY" secondItem="h96-dz-UxF" secondAttribute="centerY" id="k4Z-f7-Kou"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="zoomLabel" destination="FGr-zL-EIG" id="Drz-Uj-9JP"/>
+            </connections>
+            <point key="canvasLocation" x="55" y="-368"/>
+        </view>
+    </objects>
+</document>

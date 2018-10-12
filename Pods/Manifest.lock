@@ -1,0 +1,18 @@
+PODS:
+  - LSDialogViewController (0.1.9)
+  - NVActivityIndicatorView (3.0)
+  - SlideMenuControllerSwift (3.0.0)
+
+DEPENDENCIES:
+  - LSDialogViewController
+  - NVActivityIndicatorView
+  - SlideMenuControllerSwift
+
+SPEC CHECKSUMS:
+  LSDialogViewController: 7c1aec891a0ec81ef31ce6d77c45e6637c9eb9d6
+  NVActivityIndicatorView: 81953b5e65093ba79edf4fe7268e002039ca5268
+  SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
+
+PODFILE CHECKSUM: b28425a8a3828395ac85286313a83abaf3f97ba1
+
+COCOAPODS: 1.1.0.rc.2

@@ -1,0 +1,6 @@
+framework module Pods_PaletteStudio {
+  umbrella header "Pods-PaletteStudio-umbrella.h"
+
+  export *
+  module * { export * }
+}

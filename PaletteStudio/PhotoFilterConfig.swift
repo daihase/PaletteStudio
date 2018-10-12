@@ -1,0 +1,98 @@
+//
+//  PhotoFilterConfig.swift
+//  PaletteStudio
+//
+//  Created by daihase on 2016/10/25.
+//  Copyright © 2016年 Libra Studio, Inc. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+var pickedImage: UIImage?
+var imageFromCamera: Bool = false
+let filtersArray = [
+    "None",
+    "CIPhotoEffectInstant",
+    "CIPhotoEffectProcess",
+    "CIPhotoEffectTransfer",
+    "CISepiaTone",
+    "CIPhotoEffectChrome",
+    "CIPhotoEffectFade",
+    "CIPhotoEffectTonal",
+    "CIPhotoEffectNoir",
+    "CIMaximumComponent",
+    "CIMinimumComponent",
+    "CIDotScreen",
+    "CIColorInvert",
+    "CIColorMonochrome",
+    "CIColorMonochrome",
+    "CIColorMonochrome",
+    "CIColorMonochrome",
+    "CIColorMonochrome",
+    "CIColorMonochrome",
+    "CIColorPosterize",
+    "CIFalseColor",
+    "CIFalseColor",
+    "CIFalseColor",
+    "CIFalseColor",
+    "CIFalseColor",
+    "CISharpenLuminance",
+    "CIVignette",
+    "CIPixellate",
+    "CIExposureAdjust",
+    "CIExposureAdjust",
+    "CIGammaAdjust",
+    "CIGammaAdjust",
+    "CIHueAdjust",
+    "CIHueAdjust",
+    "CIHueAdjust",
+    "CILinearToSRGBToneCurve",
+    "CIVibrance",
+    "CISepiaTone",
+    "CISepiaTone",
+    "CIGaussianBlur",
+]
+
+let filterNamesArray = [
+    "None",
+    "Instant",
+    "Process",
+    "Transfer",
+    "Sepia",
+    "Chrome",
+    "Fade",
+    "Tonal",
+    "Noir",
+    "Max",
+    "Min",
+    "Dot",
+    "Invert",
+    "Purple",
+    "Blue",
+    "Green",
+    "Orange",
+    "Red",
+    "Yellow",
+    "Poster",
+    "False1",
+    "False2",
+    "False3",
+    "False4",
+    "False5",
+    "Sharp",
+    "Vignette",
+    "Pixel",
+    "Highlight",
+    "Darken",
+    "Gdark",
+    "Glight",
+    "Hue1",
+    "Hue2",
+    "Hue3",
+    "Linear",
+    "Vibrance",
+    "Vintage1",
+    "Vintage2",
+    "Blur",     
+]

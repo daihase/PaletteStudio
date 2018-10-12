@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "DoodleDrawingPenTool.draw() -&gt; ():DoodleDrawingTools.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lineWidth">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NVActivityIndicatorViewManager.stopLoadingIndicator() -&gt; ():NVActivityIndicatorViewManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "loadingUI.center">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SlideMenuViewController.(imagePickerController(UIImagePickerController, didFinishPickingMediaWithInfo : [String : Any]) -&gt; ()).(closure #1):SlideMenuViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "image.size.width">
+            </PersistentString>
+            <PersistentString
+               value = "image.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CanvasInteractor.tappedPaintColorPickerPositiveButton(DoodleColorPicker) -&gt; ():CanvasInteractor.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedColor?.hexString!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NVActivityIndicatorViewManager.startLoadingIndicator(positionX : CGFloat, positionY : CGFloat, view : UIView) -&gt; ():NVActivityIndicatorViewManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SaveConfirmViewController.setupView() -&gt; ():SaveConfirmViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.frame.size.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CanvasWireframe.presentCanvasInterfaceFromViewController(UIViewController, loadImage : UIImage) -&gt; ():CanvasWireframe.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "controller.navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CanvasZoomToastView.addToView(view : UIView) -&gt; ():CanvasZoomToastView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.frame.size.height">
+            </PersistentString>
+            <PersistentString
+               value = "bounds.size.height">
+            </PersistentString>
+            <PersistentString
+               value = "self.bounds.size.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

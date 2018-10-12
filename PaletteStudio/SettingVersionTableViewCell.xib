@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SiB-G5-hxa" customClass="SettingVersionTableViewCell" customModule="PaletteStudio" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SiB-G5-hxa" id="kCZ-Wc-0Ab">
+                <frame key="frameInset" width="375" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDS-zE-OL3" userLabel="Title" customClass="AttributeLabel" customModule="PaletteStudio" customModuleProvider="target">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQE-Qu-BKo" userLabel="Version" customClass="AttributeLabel" customModule="PaletteStudio" customModuleProvider="target">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="iDS-zE-OL3" firstAttribute="centerY" secondItem="kCZ-Wc-0Ab" secondAttribute="centerY" id="fLr-qQ-Ky6"/>
+                    <constraint firstAttribute="trailing" secondItem="eQE-Qu-BKo" secondAttribute="trailing" constant="20" id="ile-uX-XnL"/>
+                    <constraint firstItem="eQE-Qu-BKo" firstAttribute="centerY" secondItem="kCZ-Wc-0Ab" secondAttribute="centerY" id="kwN-l3-5XZ"/>
+                    <constraint firstItem="iDS-zE-OL3" firstAttribute="leading" secondItem="kCZ-Wc-0Ab" secondAttribute="leading" constant="20" id="qez-wo-hig"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="title" destination="iDS-zE-OL3" id="sJr-5H-2rZ"/>
+                <outlet property="version" destination="eQE-Qu-BKo" id="Tcg-f2-yYC"/>
+            </connections>
+            <point key="canvasLocation" x="131" y="45"/>
+        </tableViewCell>
+    </objects>
+</document>

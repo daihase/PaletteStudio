@@ -1,0 +1,9 @@
+{
+  "commitish" : "1.2.4",
+  "iOS" : [
+    {
+      "name" : "PhotoCropEditor",
+      "hash" : "d2b8a6fb72fe7e249598a047247988b13d92ef91add51b39e216d6c1d04595cd"
+    }
+  ]
+}

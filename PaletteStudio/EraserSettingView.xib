@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EraserSettingViewController" customModule="PaletteStudio" customModuleProvider="target">
+            <connections>
+                <outlet property="doodleDrawingSubView" destination="y7Y-8g-EVB" id="R9v-cR-2uo"/>
+                <outlet property="negativeLabel" destination="qTx-ZV-NIx" id="cny-1j-egs"/>
+                <outlet property="positiveLabel" destination="blx-uE-OmU" id="dhr-Yz-EZR"/>
+                <outlet property="subDialogArea" destination="I6a-El-FaB" id="TnI-kF-yMK"/>
+                <outlet property="thicknessSlider" destination="NdG-Cw-lfL" id="hwc-hu-XSW"/>
+                <outlet property="view" destination="iN0-l3-epB" id="nd8-SY-Lyw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="EraserSettingView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultDialogBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ble-kj-OoA">
+                    <rect key="frame" x="19" y="168.5" width="337.5" height="330"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="350" id="Ga2-80-6sV"/>
+                        <constraint firstAttribute="width" secondItem="ble-kj-OoA" secondAttribute="height" multiplier="169:175" id="TXi-l5-SZ7"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Ga2-80-6sV"/>
+                            <exclude reference="TXi-l5-SZ7"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7Y-8g-EVB" userLabel="DrawingView" customClass="DoodleDrawingSubView" customModule="PaletteStudio" customModuleProvider="target">
+                    <rect key="frame" x="39" y="198.5" width="297.5" height="90"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SubDialogEraser" translatesAutoresizingMaskIntoConstraints="NO" id="VbX-2b-oAn">
+                            <rect key="frame" x="235.5" y="0.0" width="62" height="70"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.2998145518" green="0.29022254089999999" blue="0.29127809459999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="VbX-2b-oAn" secondAttribute="trailing" id="aRy-gi-gR8"/>
+                        <constraint firstAttribute="height" constant="90" id="sBU-el-7WW"/>
+                        <constraint firstItem="VbX-2b-oAn" firstAttribute="leading" secondItem="y7Y-8g-EVB" secondAttribute="leading" id="tJo-B2-R6L"/>
+                        <constraint firstItem="VbX-2b-oAn" firstAttribute="top" secondItem="y7Y-8g-EVB" secondAttribute="top" id="yPZ-aU-FlX"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="tJo-B2-R6L"/>
+                        </mask>
+                    </variation>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I6a-El-FaB">
+                    <rect key="frame" x="39" y="308.5" width="297.5" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="SBL-lG-zMH"/>
+                    </constraints>
+                </imageView>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="NdG-Cw-lfL" customClass="CustomSlider" customModule="PaletteStudio" customModuleProvider="target">
+                    <rect key="frame" x="57" y="333" width="261.5" height="31"/>
+                </slider>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obj-5P-OA6" userLabel="決定ボタン">
+                    <rect key="frame" x="197.5" y="418.5" width="120" height="50"/>
+                    <state key="normal" image="DefaultDialogButtonBackground"/>
+                    <connections>
+                        <action selector="tapPositiveButton:" destination="-1" eventType="touchUpInside" id="NGF-ef-IG5"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqv-3t-Aus" userLabel="spacer">
+                    <rect key="frame" x="177.5" y="418.5" width="20" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="7lf-kt-3h2"/>
+                        <constraint firstAttribute="width" constant="20" id="K5w-CB-wgs"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65O-sC-h4x" userLabel="キャンセルボタン">
+                    <rect key="frame" x="57.5" y="418.5" width="120" height="50"/>
+                    <state key="normal" image="DefaultDialogButtonBackground"/>
+                    <connections>
+                        <action selector="tapNegativeButton:" destination="-1" eventType="touchUpInside" id="rlV-mG-gmg"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="決定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blx-uE-OmU" customClass="AttributeLabel" customModule="PaletteStudio" customModuleProvider="target">
+                    <rect key="frame" x="239" y="433" width="37" height="21.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.25490196079999999" green="0.12549019610000001" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="1" height="2"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="キャンセル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTx-ZV-NIx" customClass="AttributeLabel" customModule="PaletteStudio" customModuleProvider="target">
+                    <rect key="frame" x="71.5" y="433" width="92" height="21.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.25490196079999999" green="0.12549019610000001" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="1" height="2"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Lqv-3t-Aus" firstAttribute="bottom" secondItem="ble-kj-OoA" secondAttribute="bottom" constant="-30" id="1Q0-Id-8iK"/>
+                <constraint firstItem="ble-kj-OoA" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.8" id="4M0-jC-WpE"/>
+                <constraint firstItem="Lqv-3t-Aus" firstAttribute="bottom" secondItem="obj-5P-OA6" secondAttribute="bottom" id="4QT-UD-vtX"/>
+                <constraint firstItem="I6a-El-FaB" firstAttribute="top" secondItem="y7Y-8g-EVB" secondAttribute="bottom" constant="20" id="4Ui-4c-9bF"/>
+                <constraint firstItem="ble-kj-OoA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6Ho-J4-XFF"/>
+                <constraint firstItem="y7Y-8g-EVB" firstAttribute="top" secondItem="ble-kj-OoA" secondAttribute="top" constant="30" id="AhL-ZZ-Adx"/>
+                <constraint firstItem="I6a-El-FaB" firstAttribute="trailing" secondItem="ble-kj-OoA" secondAttribute="trailing" constant="-20" id="B9I-Ba-Web"/>
+                <constraint firstItem="ble-kj-OoA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Dpm-J7-Rn0"/>
+                <constraint firstItem="qTx-ZV-NIx" firstAttribute="centerX" secondItem="65O-sC-h4x" secondAttribute="centerX" id="Dva-Cj-APf"/>
+                <constraint firstItem="Lqv-3t-Aus" firstAttribute="centerX" secondItem="NdG-Cw-lfL" secondAttribute="centerX" id="EP8-xi-Pea"/>
+                <constraint firstItem="ble-kj-OoA" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="FCS-vj-aYG"/>
+                <constraint firstItem="65O-sC-h4x" firstAttribute="bottom" secondItem="Lqv-3t-Aus" secondAttribute="bottom" id="FIe-Lr-GKi"/>
+                <constraint firstItem="Lqv-3t-Aus" firstAttribute="leading" secondItem="65O-sC-h4x" secondAttribute="trailing" id="GgC-Fg-sMP"/>
+                <constraint firstItem="qTx-ZV-NIx" firstAttribute="centerY" secondItem="65O-sC-h4x" secondAttribute="centerY" id="Ghx-yB-JIl"/>
+                <constraint firstItem="65O-sC-h4x" firstAttribute="leading" secondItem="Lqv-3t-Aus" secondAttribute="trailing" id="H5h-j3-9nd"/>
+                <constraint firstItem="NdG-Cw-lfL" firstAttribute="leading" secondItem="I6a-El-FaB" secondAttribute="leading" constant="20" id="IYt-AB-Iz4"/>
+                <constraint firstItem="ble-kj-OoA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Iza-Qk-wKr"/>
+                <constraint firstAttribute="bottom" secondItem="ble-kj-OoA" secondAttribute="bottom" constant="20" id="KmA-KY-Xdt"/>
+                <constraint firstItem="NdG-Cw-lfL" firstAttribute="trailing" secondItem="I6a-El-FaB" secondAttribute="trailing" constant="-20" id="LEO-It-eLB"/>
+                <constraint firstItem="y7Y-8g-EVB" firstAttribute="top" secondItem="ble-kj-OoA" secondAttribute="top" constant="50" id="PRG-kr-o4J"/>
+                <constraint firstAttribute="trailing" secondItem="ble-kj-OoA" secondAttribute="trailing" constant="10" id="Qjb-Qq-XTO"/>
+                <constraint firstItem="obj-5P-OA6" firstAttribute="leading" secondItem="Lqv-3t-Aus" secondAttribute="trailing" id="X8T-Cv-rys"/>
+                <constraint firstItem="I6a-El-FaB" firstAttribute="leading" secondItem="ble-kj-OoA" secondAttribute="leading" constant="20" id="YO5-6N-Jcb"/>
+                <constraint firstItem="Lqv-3t-Aus" firstAttribute="top" secondItem="I6a-El-FaB" secondAttribute="bottom" constant="30" id="Ydf-Na-y9n"/>
+                <constraint firstItem="ble-kj-OoA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="eUc-j9-t1e"/>
+                <constraint firstItem="blx-uE-OmU" firstAttribute="centerX" secondItem="obj-5P-OA6" secondAttribute="centerX" id="fl7-9c-Osm"/>
+                <constraint firstItem="NdG-Cw-lfL" firstAttribute="centerY" secondItem="I6a-El-FaB" secondAttribute="centerY" id="g8m-R6-QqZ"/>
+                <constraint firstItem="ble-kj-OoA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gEp-Zg-Yek"/>
+                <constraint firstItem="ble-kj-OoA" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="jIw-PI-L4v"/>
+                <constraint firstItem="y7Y-8g-EVB" firstAttribute="leading" secondItem="ble-kj-OoA" secondAttribute="leading" constant="20" id="jRp-K1-bd8"/>
+                <constraint firstItem="obj-5P-OA6" firstAttribute="trailing" secondItem="Lqv-3t-Aus" secondAttribute="trailing" constant="10" id="o2j-wn-aZ7"/>
+                <constraint firstItem="y7Y-8g-EVB" firstAttribute="trailing" secondItem="ble-kj-OoA" secondAttribute="trailing" constant="-20" id="sSv-yg-fPu"/>
+                <constraint firstAttribute="trailing" secondItem="ble-kj-OoA" secondAttribute="trailing" constant="10" id="sf2-cH-GNb"/>
+                <constraint firstItem="Lqv-3t-Aus" firstAttribute="centerX" secondItem="ble-kj-OoA" secondAttribute="centerX" id="tBP-Eq-IBq"/>
+                <constraint firstItem="blx-uE-OmU" firstAttribute="centerY" secondItem="obj-5P-OA6" secondAttribute="centerY" id="tWL-0M-AhC"/>
+                <constraint firstItem="ble-kj-OoA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="uXH-d9-Wvw"/>
+                <constraint firstItem="Lqv-3t-Aus" firstAttribute="leading" secondItem="obj-5P-OA6" secondAttribute="trailing" id="vJA-Iw-qzo"/>
+                <constraint firstItem="ble-kj-OoA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xNP-1y-GBb"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="H5h-j3-9nd"/>
+                    <exclude reference="tBP-Eq-IBq"/>
+                    <exclude reference="vJA-Iw-qzo"/>
+                    <exclude reference="4M0-jC-WpE"/>
+                    <exclude reference="Dpm-J7-Rn0"/>
+                    <exclude reference="KmA-KY-Xdt"/>
+                    <exclude reference="Qjb-Qq-XTO"/>
+                    <exclude reference="eUc-j9-t1e"/>
+                    <exclude reference="gEp-Zg-Yek"/>
+                    <exclude reference="jIw-PI-L4v"/>
+                    <exclude reference="sf2-cH-GNb"/>
+                    <exclude reference="uXH-d9-Wvw"/>
+                    <exclude reference="o2j-wn-aZ7"/>
+                    <exclude reference="PRG-kr-o4J"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="232.5" y="283.25"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="DefaultDialogBackground" width="27" height="31"/>
+        <image name="DefaultDialogButtonBackground" width="120" height="50"/>
+        <image name="SubDialogEraser" width="62" height="70"/>
+    </resources>
+</document>

@@ -1,0 +1,4 @@
+framework module PhotoCropEditor {
+    header "PhotoCropEditor-Swift.h"
+    requires objc
+}

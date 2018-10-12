@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PenColorPickerViewController" customModule="PaletteStudio" customModuleProvider="target">
+            <connections>
+                <outlet property="doodleColorPicker" destination="W1E-Gf-Nsg" id="XTp-yx-bDr"/>
+                <outlet property="negativeLabel" destination="7fe-j0-niV" id="jhH-Hy-35s"/>
+                <outlet property="positiveLabel" destination="Zjs-kB-CuE" id="DWK-lA-6iK"/>
+                <outlet property="subDialogArea" destination="FUo-uZ-YMj" id="Nra-by-bQj"/>
+                <outlet property="view" destination="iN0-l3-epB" id="9TT-YN-dmW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="PenColorPickerView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultDialogBackground" translatesAutoresizingMaskIntoConstraints="NO" id="BGh-xD-cC4">
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="BGh-xD-cC4" secondAttribute="height" multiplier="339:500" id="OSo-q4-2Vh"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="OSo-q4-2Vh"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FUo-uZ-YMj" userLabel="SubDialogView"/>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEH-cS-gZ9" userLabel="Spacer">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="9lD-JH-IXW"/>
+                        <constraint firstAttribute="height" constant="50" id="UhS-4M-5rh"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQf-YF-EWr" userLabel="決定ボタン">
+                    <state key="normal" image="DefaultDialogButtonBackground"/>
+                    <connections>
+                        <action selector="tapPositiveButton:" destination="-1" eventType="touchUpInside" id="5GC-FD-9o4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o66-a0-mIn" userLabel="Cancel">
+                    <state key="normal" image="DefaultDialogButtonBackground"/>
+                    <connections>
+                        <action selector="tapNegativeButton:" destination="-1" eventType="touchUpInside" id="wnF-Os-BM9"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="決定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjs-kB-CuE" customClass="AttributeLabel" customModule="PaletteStudio" customModuleProvider="target">
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.25490196079999999" green="0.12549019610000001" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fe-j0-niV" customClass="AttributeLabel" customModule="PaletteStudio" customModuleProvider="target">
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.25490196079999999" green="0.12549019610000001" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1E-Gf-Nsg" userLabel="Color Picker" customClass="DoodleColorPicker" customModule="PaletteStudio" customModuleProvider="target">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="J00-pY-6jQ"/>
+                        <constraint firstAttribute="height" constant="300" id="Tpw-wK-iMK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="BGh-xD-cC4" secondAttribute="bottom" constant="20" id="64X-gS-bBE"/>
+                <constraint firstItem="W1E-Gf-Nsg" firstAttribute="top" secondItem="FUo-uZ-YMj" secondAttribute="top" id="7ie-Yn-9Dd"/>
+                <constraint firstItem="BGh-xD-cC4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="829-VM-e8g"/>
+                <constraint firstItem="LQf-YF-EWr" firstAttribute="bottom" secondItem="cEH-cS-gZ9" secondAttribute="bottom" id="94e-6g-PjE"/>
+                <constraint firstItem="BGh-xD-cC4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9DR-ZQ-gYH"/>
+                <constraint firstItem="FUo-uZ-YMj" firstAttribute="trailing" secondItem="BGh-xD-cC4" secondAttribute="trailing" constant="-20" id="9y8-Je-9PJ"/>
+                <constraint firstItem="W1E-Gf-Nsg" firstAttribute="centerX" secondItem="BGh-xD-cC4" secondAttribute="centerX" id="CNd-RY-1Kl"/>
+                <constraint firstItem="FUo-uZ-YMj" firstAttribute="top" secondItem="BGh-xD-cC4" secondAttribute="top" constant="50" id="Cn4-Et-byu"/>
+                <constraint firstItem="cEH-cS-gZ9" firstAttribute="leading" secondItem="o66-a0-mIn" secondAttribute="trailing" id="EKU-Hd-Fnp"/>
+                <constraint firstItem="BGh-xD-cC4" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="HZ6-Cf-Q7g"/>
+                <constraint firstItem="W1E-Gf-Nsg" firstAttribute="bottom" secondItem="FUo-uZ-YMj" secondAttribute="bottom" constant="-30" id="K5M-9p-QCv"/>
+                <constraint firstItem="FUo-uZ-YMj" firstAttribute="top" secondItem="BGh-xD-cC4" secondAttribute="top" constant="50" id="Laq-s4-XG3"/>
+                <constraint firstItem="FUo-uZ-YMj" firstAttribute="trailing" secondItem="BGh-xD-cC4" secondAttribute="trailing" constant="-30" id="MSk-y9-KmP"/>
+                <constraint firstItem="FUo-uZ-YMj" firstAttribute="leading" secondItem="BGh-xD-cC4" secondAttribute="leading" constant="30" id="NSz-4Q-odd"/>
+                <constraint firstItem="Zjs-kB-CuE" firstAttribute="centerY" secondItem="LQf-YF-EWr" secondAttribute="centerY" id="Q7S-ZJ-JIh"/>
+                <constraint firstItem="cEH-cS-gZ9" firstAttribute="bottom" secondItem="BGh-xD-cC4" secondAttribute="bottom" constant="-30" id="SMJ-zj-ltf"/>
+                <constraint firstItem="FUo-uZ-YMj" firstAttribute="bottom" secondItem="cEH-cS-gZ9" secondAttribute="bottom" constant="-50" id="Svx-s4-Q5P"/>
+                <constraint firstItem="Zjs-kB-CuE" firstAttribute="centerX" secondItem="LQf-YF-EWr" secondAttribute="centerX" id="U9W-0O-Alm"/>
+                <constraint firstItem="o66-a0-mIn" firstAttribute="top" secondItem="FUo-uZ-YMj" secondAttribute="bottom" constant="30" id="Yhy-rK-cs5"/>
+                <constraint firstItem="7fe-j0-niV" firstAttribute="centerY" secondItem="o66-a0-mIn" secondAttribute="centerY" id="Z3d-kK-6K8"/>
+                <constraint firstItem="FUo-uZ-YMj" firstAttribute="bottom" secondItem="BGh-xD-cC4" secondAttribute="bottom" constant="-50" id="Z78-dh-kfT"/>
+                <constraint firstItem="FUo-uZ-YMj" firstAttribute="leading" secondItem="BGh-xD-cC4" secondAttribute="leading" constant="20" id="bYI-ES-AEn"/>
+                <constraint firstAttribute="trailing" secondItem="BGh-xD-cC4" secondAttribute="trailing" constant="20" id="br1-lc-dAh"/>
+                <constraint firstItem="BGh-xD-cC4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="dte-iT-ACo"/>
+                <constraint firstItem="cEH-cS-gZ9" firstAttribute="top" secondItem="FUo-uZ-YMj" secondAttribute="bottom" constant="30" id="fpG-TZ-6Ln"/>
+                <constraint firstItem="LQf-YF-EWr" firstAttribute="leading" secondItem="cEH-cS-gZ9" secondAttribute="leading" id="hOO-cf-l4C"/>
+                <constraint firstItem="cEH-cS-gZ9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hzr-MF-KwW"/>
+                <constraint firstItem="BGh-xD-cC4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="kux-Uc-3TO"/>
+                <constraint firstItem="cEH-cS-gZ9" firstAttribute="bottom" secondItem="o66-a0-mIn" secondAttribute="bottom" id="nTM-hg-7VE"/>
+                <constraint firstItem="LQf-YF-EWr" firstAttribute="leading" secondItem="cEH-cS-gZ9" secondAttribute="trailing" id="qF2-Bq-RPZ"/>
+                <constraint firstItem="7fe-j0-niV" firstAttribute="centerX" secondItem="o66-a0-mIn" secondAttribute="centerX" id="tD6-Ha-CPk"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="64X-gS-bBE"/>
+                    <exclude reference="br1-lc-dAh"/>
+                    <exclude reference="dte-iT-ACo"/>
+                    <exclude reference="kux-Uc-3TO"/>
+                    <exclude reference="Laq-s4-XG3"/>
+                    <exclude reference="MSk-y9-KmP"/>
+                    <exclude reference="NSz-4Q-odd"/>
+                    <exclude reference="Svx-s4-Q5P"/>
+                    <exclude reference="Z78-dh-kfT"/>
+                    <exclude reference="hOO-cf-l4C"/>
+                    <exclude reference="Yhy-rK-cs5"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="DefaultDialogBackground" width="27" height="31"/>
+        <image name="DefaultDialogButtonBackground" width="120" height="50"/>
+    </resources>
+</document>

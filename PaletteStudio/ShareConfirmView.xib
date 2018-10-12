@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShareConfirmViewController" customModule="PaletteStudio" customModuleProvider="target">
+            <connections>
+                <outlet property="returnLabel" destination="YQW-f3-r0c" id="OB2-IM-ryX"/>
+                <outlet property="titleLabel" destination="1aY-pr-Gbq" id="16F-Vn-f7D"/>
+                <outlet property="view" destination="Owp-wI-kQB" id="nUM-iI-cFJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Owp-wI-kQB" userLabel="ShareConfirmView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultDialogBackground" translatesAutoresizingMaskIntoConstraints="NO" id="qVi-oG-qQE">
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qVi-oG-qQE" secondAttribute="height" multiplier="169:90" id="hLB-HR-bIV"/>
+                        <constraint firstAttribute="width" secondItem="qVi-oG-qQE" secondAttribute="height" multiplier="169:90" id="qzl-dH-Jed"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="hLB-HR-bIV"/>
+                            <exclude reference="qzl-dH-Jed"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共有しますか？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aY-pr-Gbq" customClass="AttributeLabel" customModule="PaletteStudio" customModuleProvider="target">
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlL-R2-52J" userLabel="Time Line">
+                    <state key="normal" image="TimeLineShare"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fe-Rb-BVx" userLabel="Back Button">
+                    <state key="normal" image="CustomDialogButtonBgLong"/>
+                    <connections>
+                        <action selector="tapReturnButton:" destination="-1" eventType="touchUpInside" id="AdV-q8-bRA"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="戻る" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQW-f3-r0c" customClass="AttributeLabel" customModule="PaletteStudio" customModuleProvider="target">
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.25490196079999999" green="0.12549019610000001" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J12-jC-Lv7" userLabel="Twitter Share">
+                    <state key="normal" image="TwitterShare"/>
+                    <connections>
+                        <action selector="twitterShareButton:" destination="-1" eventType="touchUpInside" id="n5a-4D-GDb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fM2-QS-DNP" userLabel="Facebook Share">
+                    <state key="normal" image="FacebookShare"/>
+                    <connections>
+                        <action selector="facebookShareButton:" destination="-1" eventType="touchUpInside" id="UrR-Ch-R3u"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c85-1J-gc9" userLabel="Line Share">
+                    <state key="normal" image="LineShare"/>
+                    <connections>
+                        <action selector="lineShareButton:" destination="-1" eventType="touchUpInside" id="3pz-OL-8YW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="1aY-pr-Gbq" firstAttribute="top" secondItem="Owp-wI-kQB" secondAttribute="top" constant="30" id="0l0-R7-u5H"/>
+                <constraint firstItem="fM2-QS-DNP" firstAttribute="centerX" secondItem="qVi-oG-qQE" secondAttribute="centerX" id="2PT-UL-St7"/>
+                <constraint firstItem="8fe-Rb-BVx" firstAttribute="bottom" secondItem="qVi-oG-qQE" secondAttribute="bottom" constant="-20" id="5PD-hG-0S7"/>
+                <constraint firstItem="PlL-R2-52J" firstAttribute="centerX" secondItem="Owp-wI-kQB" secondAttribute="centerX" id="7Kb-uQ-Z0o"/>
+                <constraint firstItem="J12-jC-Lv7" firstAttribute="top" secondItem="PlL-R2-52J" secondAttribute="bottom" constant="10" id="7sn-8S-Uu8"/>
+                <constraint firstItem="qVi-oG-qQE" firstAttribute="centerY" secondItem="Owp-wI-kQB" secondAttribute="centerY" id="Ib9-Pq-zNK"/>
+                <constraint firstItem="PlL-R2-52J" firstAttribute="top" secondItem="1aY-pr-Gbq" secondAttribute="bottom" constant="63" id="Iqc-RD-nh0"/>
+                <constraint firstItem="PlL-R2-52J" firstAttribute="centerX" secondItem="qVi-oG-qQE" secondAttribute="centerX" id="JVZ-g4-EmB"/>
+                <constraint firstItem="c85-1J-gc9" firstAttribute="top" secondItem="fM2-QS-DNP" secondAttribute="bottom" constant="10" id="KV7-iJ-IMV"/>
+                <constraint firstItem="YQW-f3-r0c" firstAttribute="centerY" secondItem="8fe-Rb-BVx" secondAttribute="centerY" id="M7U-2T-1o1"/>
+                <constraint firstItem="qVi-oG-qQE" firstAttribute="height" secondItem="Owp-wI-kQB" secondAttribute="height" id="Ox5-u4-rnZ"/>
+                <constraint firstItem="PlL-R2-52J" firstAttribute="bottom" secondItem="qVi-oG-qQE" secondAttribute="bottom" constant="-20" id="QPk-W8-ABV"/>
+                <constraint firstItem="qVi-oG-qQE" firstAttribute="centerX" secondItem="1aY-pr-Gbq" secondAttribute="centerX" id="T7B-zh-EFL"/>
+                <constraint firstItem="qVi-oG-qQE" firstAttribute="centerX" secondItem="Owp-wI-kQB" secondAttribute="centerX" id="TUB-NA-WXP"/>
+                <constraint firstItem="J12-jC-Lv7" firstAttribute="centerX" secondItem="qVi-oG-qQE" secondAttribute="centerX" id="V5M-tQ-uzF"/>
+                <constraint firstItem="8fe-Rb-BVx" firstAttribute="top" secondItem="PlL-R2-52J" secondAttribute="bottom" constant="20" id="Zhk-hl-HwK"/>
+                <constraint firstItem="8fe-Rb-BVx" firstAttribute="top" secondItem="c85-1J-gc9" secondAttribute="bottom" constant="10" id="bfA-z4-Jsh"/>
+                <constraint firstItem="qVi-oG-qQE" firstAttribute="top" secondItem="Owp-wI-kQB" secondAttribute="top" constant="10" id="bhd-ua-sb2"/>
+                <constraint firstItem="1aY-pr-Gbq" firstAttribute="top" secondItem="qVi-oG-qQE" secondAttribute="top" constant="50" id="cgo-BS-Obh"/>
+                <constraint firstItem="8fe-Rb-BVx" firstAttribute="centerX" secondItem="qVi-oG-qQE" secondAttribute="centerX" id="fMQ-h2-0Ti"/>
+                <constraint firstItem="YQW-f3-r0c" firstAttribute="centerX" secondItem="8fe-Rb-BVx" secondAttribute="centerX" id="fU4-uR-end"/>
+                <constraint firstItem="c85-1J-gc9" firstAttribute="centerX" secondItem="qVi-oG-qQE" secondAttribute="centerX" id="gQc-iH-htW"/>
+                <constraint firstItem="qVi-oG-qQE" firstAttribute="height" secondItem="Owp-wI-kQB" secondAttribute="height" id="jnZ-t4-F23"/>
+                <constraint firstItem="qVi-oG-qQE" firstAttribute="centerX" secondItem="Owp-wI-kQB" secondAttribute="centerX" id="l8a-BJ-BGd"/>
+                <constraint firstItem="fM2-QS-DNP" firstAttribute="top" secondItem="J12-jC-Lv7" secondAttribute="bottom" constant="10" id="mbH-Rh-C6F"/>
+                <constraint firstItem="qVi-oG-qQE" firstAttribute="leading" secondItem="Owp-wI-kQB" secondAttribute="leading" constant="10" id="nNn-v6-pCv"/>
+                <constraint firstItem="qVi-oG-qQE" firstAttribute="width" secondItem="Owp-wI-kQB" secondAttribute="width" multiplier="0.9" id="r7y-5M-bJn"/>
+                <constraint firstAttribute="trailing" secondItem="qVi-oG-qQE" secondAttribute="trailing" constant="10" id="tQg-oa-gvX"/>
+                <constraint firstItem="1aY-pr-Gbq" firstAttribute="centerX" secondItem="qVi-oG-qQE" secondAttribute="centerX" id="uIB-ii-xtu"/>
+                <constraint firstItem="qVi-oG-qQE" firstAttribute="centerY" secondItem="Owp-wI-kQB" secondAttribute="centerY" id="uTh-4f-k9F"/>
+                <constraint firstItem="1aY-pr-Gbq" firstAttribute="top" secondItem="qVi-oG-qQE" secondAttribute="top" constant="30" id="uvL-6N-1Ze"/>
+                <constraint firstItem="qVi-oG-qQE" firstAttribute="leading" secondItem="Owp-wI-kQB" secondAttribute="leading" constant="14" id="vx9-dU-Nq1"/>
+                <constraint firstItem="PlL-R2-52J" firstAttribute="top" secondItem="1aY-pr-Gbq" secondAttribute="bottom" constant="20" id="xkM-U4-zKw"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="0l0-R7-u5H"/>
+                    <exclude reference="cgo-BS-Obh"/>
+                    <exclude reference="Zhk-hl-HwK"/>
+                    <exclude reference="7Kb-uQ-Z0o"/>
+                    <exclude reference="Iqc-RD-nh0"/>
+                    <exclude reference="QPk-W8-ABV"/>
+                    <exclude reference="Ib9-Pq-zNK"/>
+                    <exclude reference="Ox5-u4-rnZ"/>
+                    <exclude reference="T7B-zh-EFL"/>
+                    <exclude reference="bhd-ua-sb2"/>
+                    <exclude reference="jnZ-t4-F23"/>
+                    <exclude reference="l8a-BJ-BGd"/>
+                    <exclude reference="nNn-v6-pCv"/>
+                    <exclude reference="tQg-oa-gvX"/>
+                    <exclude reference="vx9-dU-Nq1"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="143.5" y="341.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CustomDialogButtonBgLong" width="200" height="50"/>
+        <image name="DefaultDialogBackground" width="27" height="31"/>
+        <image name="FacebookShare" width="200" height="50"/>
+        <image name="LineShare" width="200" height="50"/>
+        <image name="TimeLineShare" width="200" height="50"/>
+        <image name="TwitterShare" width="200" height="50"/>
+    </resources>
+</document>
